@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    min-height: 80vh;
+    grid-gap: 1rem;
+}
+
+.img-container {
+    overflow: hidden;
+} 
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.img-container img:hover {
+    transform: scale(1.2);
+}

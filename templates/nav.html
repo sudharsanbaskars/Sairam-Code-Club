@@ -1,0 +1,53 @@
+<!-- 
+<nav>
+	<ul class="horizontal-list text-center nav-menu"> 
+		<li>
+			<a href="#">Home</a>
+		</li>
+		<li>
+			<a href="#">About</a>
+		</li>
+		<li>
+			<a href="#">Our Team</a>
+		</li>
+		<li>
+			<a href="#">Events</a>
+		</li>
+		<li>
+			<a href="#">Gallery</a>
+		</li>
+		<li>
+			<a href="#">Contact Us</a>
+		</li>
+		<li>
+			<a href="{% url 'admin:index' %}">Admin Login</a>
+		</li>
+	</ul>
+</nav> -->
+
+
+
+<nav>
+	<ul class="horizontal-list text-center nav-menu"> 
+		<li>
+			<a id="nav-home" style="font-size: 20px;" href="{% url 'home' %}">Home</a>
+		</li>
+		<li>
+			<a id="nav-about" style="font-size: 20px;" href="#scroll-about">About</a>
+		</li>
+		<li>
+			<a id="nav-team" style="font-size: 20px;" href="#scroll-team">Team</a>
+		</li>
+		<li>
+			<a id="nav-gallery" style="font-size: 20px;" href="#scroll-gallery">Gallery</a>
+		</li>
+		<li>
+			<a id="nav-contact" style="font-size: 20px;" href="#scroll-footer">Contact Us</a>
+		</li>
+		<li>
+			<a id="nav-contact" style="font-size: 20px;" href="{% url 'admin:index' %}">
+				Admin Login
+			</a>
+		</li>
+	</ul>
+</nav>

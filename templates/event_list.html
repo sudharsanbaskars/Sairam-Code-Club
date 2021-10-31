@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>List View</title>
+</head>
+<body>
+	<div class="container-fluid">
+		{% for post in events %}
+			<h1>{{post.title}}</h1>
+			<img src="{{post.poster.url}}" width="30%;">
+			<p>Description: {{post.description}}</p>
+			<p>Start Date: {{post.date_posted}}</p>
+			<p>End Date: {{post.end_date}}</p>
+		{% endfor %}
+	</div>
+</body>
+</html>s
+
+<!-- {{BASE_DIR}}/static/images/{{ post.poster }} -->

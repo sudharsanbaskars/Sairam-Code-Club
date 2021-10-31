@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>
+		Sairam Code club
+	</title>
+	<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+	<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+	<script src="https://kit.fontawesome.com/8e2605db19.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style_footer.css' %}">
+	<style>
+		html {
+          scroll-behavior: smooth;
+        }
+
+		* {
+    		margin: 0;
+    		padding: 0;
+    		box-sizing: border-box;
+		}
+
+		.gallery {
+    		display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			min-height: 90vh;
+			grid-gap: 0.3rem;
+			padding: 300px;
+			padding-top: 20px;
+			padding-bottom: 50px;
+		}
+
+		.img-container {
+			overflow: hidden;
+		} 
+
+		.img-container img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all 0.3s ease-out;
+			cursor: pointer;
+		}
+		.img-container img:hover {
+			transform: scale(1.2);
+		}
+
+		.bg-modal {
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			position: absolute;
+			top: 1300px;
+			display: none;
+			justify-content: center;
+			align-items: center;
+		}
+		.modal-content {
+			width: 1300px;
+			height: 600px;
+			background-color: rgb(236, 216, 236);
+			border-radius: 20px;
+			/* padding: 25px; */
+			padding-top: 50px;
+			text-align: center;
+		}
+		#modal-image {
+			border-radius: 25px;
+		}
+		.column {
+  float: left;
+  width: 50%;
+  /* padding: 10px; */
+  height: 200px; /* Should be removed. Only for demonstration */
+}
+
+.box-column {
+	float: left;
+    width: 50%;
+    /* padding: 10px; */
+    height: 200px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 0 auto;
+
+}
+/* Clear floats after the columns */
+.row:after {
+  /* content: ""; */
+  display: table;
+  clear: both;
+}
+	</style>
+
+
+</head>
+<body>
+	<header id="body-header">
+		{% include "nav.html" %}
+		<div id="name-social-container">
+			<div>
+				<h1 class="my-name">Code Club</h1>
+			</div>
+
+			<div class="social-container">
+				<ul class="horizontal-list text-center social-icons">
+					<li>
+						<a href="#">
+							<i class="fab fa-linkedin"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fab fa-github-square"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fab fa-google-plus-g"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<main>
+
+		<section id="about">
+			<div id="my-image">
+				<img src="{% static 'images/logo-modified.png' %}">
+			</div>
+			<div id="scroll-about">
+							<div class="section-header">
+				<!-- <span><i class="fas fa-user-graduate"></i></span> -->
+				<h1>🎓About Code Club</h1>
+			</div>
+			<div id="about-text">
+				<p>
+					Sairam group of institutions, established in the year 1995 by Late MJF.Ln.Leo Muthu, Founder Chairman of Leo Muthu Education Trust, is a non-profitable, and non-minority institution. Ever since its inception, the institution has been expanding its wide spectrum of educational streams - Schools, Polytechnic, Engineering, Medical, Management Studies, Research Centre, Pre-University and Teacher Training Institute. Every institution has well defined vision, highly committed mission and dedicated faculties to deliver excellence in education and innovation.
+			<div>
+			</div>
+
+		</section>
+		<br>
+		<div id="scroll-team">
+			<div class="section-header" style="text-align: center;">
+			<h1>Meet Our Team</h1>
+		</div>
+		
+		<section id="profile">
+
+			<div class="card">
+			  <img class="profile-img" src="{% static 'images/img2.jfif' %}" alt="John" style="width:100%">
+			  <h1>John Doe</h1>
+			  <p class="title" style="padding: 5px; color: grey">CEO & Founder, Example</p>
+			  <p style="padding:0 5px 5px 5px; color: grey">Harvard University</p>
+			  <a href="#"><i class="fa fa-dribbble last"></i></a>
+			  <a href="#"><i class="fa fa-twitter last"></i></a>
+			  <a href="#"><i class="fa fa-linkedin last"></i></a>
+			  <a href="#"><i class="fa fa-facebook last"></i></a>
+			</div>
+
+			<div class="card">
+			  <img class="profile-img" src="{% static 'images/img2.jfif' %}" alt="John" style="width:100%">
+			  <h1>John Doe</h1>
+			  <p class="title" style="padding: 5px; color: grey">CEO & Founder, Example</p>
+			  <p style="padding:0 5px 5px 5px; color: grey">Harvard University</p>
+			  <a href="#"><i class="fa fa-dribbble last"></i></a>
+			  <a href="#"><i class="fa fa-twitter last"></i></a>
+			  <a href="#"><i class="fa fa-linkedin last"></i></a>
+			  <a href="#"><i class="fa fa-facebook last"></i></a>
+			 <!--  <p><button>Contact</button></p> -->
+			</div>
+
+			<div class="card">
+			  <img class="profile-img" src="{% static 'images/img3.png' %}" alt="John" style="width:100%">
+			  <h1>John Doe</h1>
+			  <p class="title" style="padding: 5px; color: grey">CEO & Founder, Example</p>
+			  <p style="padding:0 5px 5px 5px; color: grey">Harvard University</p>
+			  <a href="#"><i class="fa fa-dribbble last"></i></a>
+			  <a href="#"><i class="fa fa-twitter last"></i></a>
+			  <a href="#"><i class="fa fa-linkedin last"></i></a>
+			  <a href="#"><i class="fa fa-facebook last"></i></a>
+			</div>
+
+			<div class="card">
+			  <img class="profile-img" src="{% static 'images/img3.png' %}" alt="John" style="width:100%">
+			  <h1>John Doe</h1>
+			  <p class="title" style="padding: 5px; color: grey;">CEO & Founder, Example</p>
+			  <p style="padding:0 5px 5px 5px; color: grey">Harvard University</p>
+			  <a href="#"><i class="fa fa-dribbble last"></i></a>
+			  <a href="#"><i class="fa fa-twitter last"></i></a>
+			  <a href="#"><i class="fa fa-linkedin last"></i></a>
+			  <a href="#"><i class="fa fa-facebook last"></i></a>
+			  <!-- <p><button>Contact</button></p> -->
+			</div>
+		</section> 
+		<br>
+
+		<br>
+		<div class="section-header" style="text-align: center;">
+			<h1 style="padding-top: 15px;">Events</h1>
+		</div>
+		<section id="event-section">
+			{% for event in events %}
+			<div class="card">
+			  <img class="event-poster" src="{{event.poster.url}}" alt="Denim Jeans" style="width:100%">
+			  <h1>{{event.title}}</h1>
+			  <p class="event-description" style="font-size: 15px;">{{event.description1}}</p>
+		<!-- 	  <div class="register-button"><a class="btn btn-primary" href="">Register</a></div> -->
+				<button class="view">View</button>
+				
+			</div>
+			<div class="bg-modal">
+		<div class="modal-content">
+			<div class="row">
+  				<div class="column">
+    				<img id="modal-image" src="{{event.poster.url}}" alt="..." height="500" width="500">
+  				</div>
+  				<div class="box-column" style="text-align: justify; padding-top: 4px; padding-bottom: 4px;">
+  					<!-- <h3>{{event.title}}</h3> -->
+  					  <p style="padding: 10px;">{{event.description1}} </p>
+					  <p style="padding: 10px;">{{event.description2}}</p>
+					  <div >
+						 <button style="font-size: 25px; border-radius: 10px; overflow: hidden;">Register</button>
+					  <button style="font-size: 25px; border-radius: 10px; overflow: hidden
+					  ;" id="button-cancel">Cancel</button>
+					</div>
+					 
+  				</div>
+			</div>
+		</div>
+	</div>
+			<script>
+
+		var buttons = document.querySelectorAll('.view');
+		for ( var counter = 0; counter < buttons.length; counter++) {
+			buttons[counter].addEventListener('click', function() {
+			document.querySelector('.bg-modal').style.display = 'flex';
+		});
+		}
+		
+		document.getElementById('button-cancel').addEventListener('click', function() {
+			document.querySelector('.bg-modal').style.display = 'none';
+		});
+	</script>
+			{% endfor %}
+		</div>
+			</div>
+		</section>
+		<br> 
+		<hr class="breaker">
+		<div id="scroll-gallery">
+			<h1 style="text-align: center;">Our Gallery</h1>
+			<div class="gallery">
+				{% for image in images %}
+				<div class="img-container" style="padding: 8px;">
+					<img src="{{image.image.url}}" alt="..." data-original="pexels1.jpg">
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		
+	</main>
+
+	
+	
+</body>
+
+<footer>
+	<div id="scroll-footer">
+		<div class="row">
+		<div class="col">
+			<img src="{% static 'images/logo-modified.png' %}"class="logo" alt="...">
+			<h3>Sairam College</h3>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis exercitationem facere ea dicta.</p>
+		</div>
+		<div class="col">
+			<h3>Sairam <div class="underline"><span></span></div></h3>
+			<p>Sai Leo Nagar, West Tambaram</p>
+			<p>Chennai-600044.</p>
+			<p>Tamil Nadu, India</p>
+			<p class="email-id">sairam@sairam.edu.in</p>
+			<h4>+91 - 0123456789</h4>
+		</div>
+		<div class="col">
+			<h3>Links <div class="underline"><span></span></div></h3>
+			<ul>
+				<li><a style="font-size: 15px;" href="{% url 'home' %}">Home</a></li>
+				<li><a style="font-size: 15px;" href="#">About Us</a></li>
+				<li><a style="font-size: 15px;" href="#">Events</a></li>
+				<li><a style="font-size: 15px;" href="#">Code CLub</a></li>
+				<li><a style="font-size: 15px;" href="#">Contacts</a></li>
+			</ul>
+		</div>
+		<div class="col">
+			<h3>Suggestions <div class="underline"><span></span></div></h3>
+			<form>
+				<i class="far fa-question-circle"></i>
+				<input type="text" placeholder="Enter your suggestion" required>
+				<button type="submit">
+					<i class="fas fa-arrow-right"></i>
+				</button>
+			</form>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/sairamec/"><i class="fab fa-facebook"></i></a>
+				<a href="https://twitter.com/sairam_ec?lang=en"><i class="fab fa-twitter"></i></a>
+				<a href=""><i class="fab fa-github"></i></a>
+				<a href=""><i class="fab fa-whatsapp"></i></a>	
+			</div>
+		</div>
+	</div>
+	<hr>
+	</div>
+	
+</footer>
+
+</html>
+
+

@@ -202,56 +202,22 @@
 		</section> 
 		<br>
 
+
 		<br>
 		<div class="section-header" style="text-align: center;">
 			<h1 style="padding-top: 15px;">Events</h1>
 		</div>
+
 		<section id="event-section">
 			{% for event in events %}
 			<div class="card">
 			  <img class="event-poster" src="{{event.poster.url}}" alt="Denim Jeans" style="width:100%">
 			  <h1>{{event.title}}</h1>
 			  <p class="event-description" style="font-size: 15px;">{{event.description1}}</p>
-		<!-- 	  <div class="register-button"><a class="btn btn-primary" href="">Register</a></div> -->
-				<button class="view">View</button>
-				
+			  <a href="{% url 'event_detail_view' event.id %}"><button type="button">View</button></a>
 			</div>
-			<div class="bg-modal">
-		<div class="modal-content">
-			<div class="row">
-  				<div class="column">
-    				<img id="modal-image" src="{{event.poster.url}}" alt="..." height="500" width="500">
-  				</div>
-  				<div class="box-column" style="text-align: justify; padding-top: 4px; padding-bottom: 4px;">
-  					<!-- <h3>{{event.title}}</h3> -->
-  					  <p style="padding: 10px;">{{event.description1}} </p>
-					  <p style="padding: 10px;">{{event.description2}}</p>
-					  <div >
-						 <button style="font-size: 25px; border-radius: 10px; overflow: hidden;">Register</button>
-					  <button style="font-size: 25px; border-radius: 10px; overflow: hidden
-					  ;" id="button-cancel">Cancel</button>
-					</div>
-					 
-  				</div>
-			</div>
-		</div>
-	</div>
-			<script>
-
-		var buttons = document.querySelectorAll('.view');
-		for ( var counter = 0; counter < buttons.length; counter++) {
-			buttons[counter].addEventListener('click', function() {
-			document.querySelector('.bg-modal').style.display = 'flex';
-		});
-		}
-		
-		document.getElementById('button-cancel').addEventListener('click', function() {
-			document.querySelector('.bg-modal').style.display = 'none';
-		});
-	</script>
 			{% endfor %}
-		</div>
-			</div>
+
 		</section>
 		<br> 
 		<hr class="breaker">
@@ -321,5 +287,3 @@
 </footer>
 
 </html>
-
-

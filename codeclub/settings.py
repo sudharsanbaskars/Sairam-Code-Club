@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-d)=sf3$2*9wh-uk3u=leno(dlvgw*&to9m9$=cm_2m+5zj!cf!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://code-club-online.herokuapp.com/', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['code-club-online.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition

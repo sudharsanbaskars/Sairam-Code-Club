@@ -1,0 +1,95 @@
+
+.reverse{
+  background-color: #faf5fa;
+  
+}
+.reverse a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.reverse a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.reverse previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.reverse next {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.reverse round {
+  border-radius: 50%;
+}
+
+
+*{
+  font-family: sans-serif;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#event-header h1{
+  margin: 20px;
+  text-align: center;
+}
+#event-detail{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+/*  margin: 40px;*/
+/*  padding: 20px;*/
+  background-color: #faf5fa;
+  justify-content: center;
+}
+
+#event-poster{
+  height: 700px;
+  width: 500px;
+  margin: 30px;
+  size: 100%;
+}
+#event-poster img{
+  width: 100%;
+  height: 100%;
+  border-color: black;
+  border: 2px solid #555;
+/*  width: 400px;
+  height: 500px;*/
+/*  margin: 30px;
+  size: 100%;*/
+}
+#event-description{
+  width: 40%;
+  height: 100vh;
+  padding: 30px;
+  margin-top: 30px;
+  text-align: justify;
+/*  background-color: white;*/
+}
+#event-description h1{
+    font-weight: 500;
+    color: #ed24ed;
+}
+
+#event-description h4{
+
+}
+
+#event-description p{
+  font-weight: 500;
+  color: grey;
+  align-content: justify;
+  font-family: sans-serif;
+}

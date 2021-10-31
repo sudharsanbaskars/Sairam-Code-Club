@@ -428,7 +428,7 @@ section{
   opacity: 0.7;
 }
 
-/*#event-section{
+#event-section{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -446,7 +446,7 @@ section{
 .detail-buttons{
 	margin-top: 40px;
 }
-*/
+
 
 /* profie*/
 #profile{

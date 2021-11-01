@@ -5,6 +5,8 @@
 	<title>
 		Sairam Code club
 	</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 	<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 	<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -14,6 +16,8 @@
 	<script src="https://kit.fontawesome.com/8e2605db19.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style_footer.css' %}">
+	
+
 	<style>
 		html {
           scroll-behavior: smooth;
@@ -23,6 +27,7 @@
     		margin: 0;
     		padding: 0;
     		box-sizing: border-box;
+    		font-family: serif;
 		}
 
 		.gallery {
@@ -101,9 +106,12 @@
 </head>
 <body>
 	<header id="body-header">
-		{% include "nav.html" %}
-		<div id="name-social-container">
-			<div>
+		<div data-aos="zoom-in">
+			{% include "nav.html" %}
+		</div>
+		
+		<div id="name-social-container" data-aos="zoom-in">
+			<div data-aos="zoom-in">
 				<h1 class="my-name">Code Club</h1>
 			</div>
 
@@ -131,10 +139,10 @@
 	<main>
 
 		<section id="about">
-			<div id="my-image">
+			<div id="my-image" data-aos="zoom-in">
 				<img src="{% static 'images/logo-modified.png' %}">
 			</div>
-			<div id="scroll-about">
+			<div id="scroll-about" data-aos="zoom-in">
 							<div class="section-header">
 				<!-- <span><i class="fas fa-user-graduate"></i></span> -->
 				<h1>🎓About Code Club</h1>
@@ -147,7 +155,7 @@
 
 		</section>
 		<br>
-		<div id="scroll-team">
+		<div id="scroll-team" data-aos="fade-right">
 			<div class="section-header" style="text-align: center;">
 			<h1>Meet Our Team</h1>
 		</div>
@@ -204,11 +212,11 @@
 
 
 		<br>
-		<div class="section-header" style="text-align: center;">
+		<div class="section-header" style="text-align: center;" data-aos="fade-left">
 			<h1 style="padding-top: 15px;">Events</h1>
 		</div>
 
-		<section id="event-section">
+		<section id="event-section" data-aos="fade-left">
 			{% for event in events %}
 			<div class="card">
 			  <img class="event-poster" src="{{event.poster.url}}" alt="Denim Jeans" style="width:100%">
@@ -221,7 +229,7 @@
 		</section>
 		<br> 
 		<hr class="breaker">
-		<div id="scroll-gallery">
+		<div id="scroll-gallery" data-aos="fade-right">
 			<h1 style="text-align: center;">Our Gallery</h1>
 			<div class="gallery">
 				{% for image in images %}
@@ -233,7 +241,13 @@
 		</div>
 		
 	</main>
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+    	offset: 300,
+    	duration: 1000,
+    });
+  </script>
 	
 	
 </body>

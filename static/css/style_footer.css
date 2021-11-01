@@ -8,23 +8,22 @@
   width: 200px;
 } */
 
-footer {
+ter {
   width: 100%;
   /* position: absolute; */
   bottom: 0;
   /* height: 200px; */
   background: linear-gradient(to right, #00093c, #2d0b00);
   color: #fff;
-  /* padding: 100px 100px 30px; */
-  padding: 100px 0 10px;
-  border-top-left-radius: 125px;
+  padding: 0 20px 0;
+  border-top-left-radius: 100px;
   font-size: 13px;
   line-height: 20px;
 }
 
 .row {
   width: 85%;
-  margin: auto;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
